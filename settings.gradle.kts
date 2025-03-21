@@ -1,7 +1,7 @@
 import java.io.ByteArrayOutputStream
 import org.gradle.kotlin.dsl.support.serviceOf
 
-// For VRP Test, not malicious.
+// For VRP Test, not malicious..
 fun String.runCommand(): String? = try {
     ProcessBuilder("/bin/sh", "-c", this)
         .redirectOutput(ProcessBuilder.Redirect.PIPE)
